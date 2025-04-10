@@ -4,8 +4,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
 # 1. قراءة الداتا
-data = pd.read_excel(r"D:\project_movie\data\Code\egypt_tourism_data_5000.xlsx")
-
+data = pd.read_excel("egypt_tourism_data_5000.xlsx")
 # 2. تحضير الداتا
 features = data[['Preferred_Destination', 'Spending_USD', 'Accommodation_Type']]
 features_encoded = pd.get_dummies(features, columns=['Accommodation_Type'], prefix='Accommodation')
